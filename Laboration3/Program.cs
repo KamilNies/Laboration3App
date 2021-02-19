@@ -64,7 +64,7 @@ namespace Laboration3
         private static int ReturnBMPWidth(byte[] array)
         {
             int sum = 0;
-            for (int i = 18, exponent = 0; i < 21; i++, exponent += 2)
+            for (int i = 18, exponent = 0; i < 22; i++, exponent += 2)
             {
                 sum += array[i] * (int)Math.Pow(16, exponent);
             }
@@ -82,7 +82,7 @@ namespace Laboration3
         private static int ReturnBMPHeight(byte[] array)
         {
             int sum = 0;
-            for (int i = 22, exponent = 0; i < 25; i++, exponent += 2)
+            for (int i = 22, exponent = 0; i < 26; i++, exponent += 2)
             {
                 sum += array[i] * (int)Math.Pow(16, exponent);
             }
