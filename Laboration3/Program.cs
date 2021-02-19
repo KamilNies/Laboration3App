@@ -12,15 +12,18 @@ namespace Laboration3
 
         static void Main(string[] args)
         {
-            string pathScreenDumpPNG = @"..\..\..\Lab3ScreenDump-900x300.png";
-            string pathTestBMP = @"..\..\..\Test_400x200.bmp";
-            string pathTestGIF = @"..\..\..\Test_400x200.gif";
-            string pathTestJPG = @"..\..\..\Test_400x200.jpg";
-            string pathTestPNG = @"..\..\..\Test_400x200.png";
+            //string pathScreenDumpPNG = @"..\..\..\Lab3ScreenDump-900x300.png";
+            //string pathTestBMP = @"..\..\..\Test_400x200.bmp";
+            //string pathTestGIF = @"..\..\..\Test_400x200.gif";
+            //string pathTestJPG = @"..\..\..\Test_400x200.jpg";
+            //string pathTestPNG = @"..\..\..\Test_400x200.png";
+
+            Console.Write("Input file path to image: ");
+            string path = Console.ReadLine();
 
             try
             {
-                byte[] bytes = GetByteArrayFromPath(pathScreenDumpPNG);
+                byte[] bytes = GetByteArrayFromPath(path);
                 PrintImageInformation(bytes);
             }
             catch (FileNotFoundException)

@@ -35,7 +35,7 @@ namespace Laboration3
         {
             //IHDR always comes first if .png; find it, do neccassary calculations, then break.
 
-            /* Index 0 thoughout 8 are reserved for the .png signature, which is why we start at
+            /* Index 0 thoughout 7 are reserved for the .png signature, which is why we start at
             index 8 when searching for the IHDR chunk. */
             int nextChunkIndex = 0;
             for (int i = 8; i <= array.Length - 4; i++)
@@ -55,7 +55,7 @@ namespace Laboration3
             //Once all the chunks are found, we simply print the chunk tag and size.
             for (int i = 0; i < chunkType.Count; i++)
             {
-                Console.WriteLine("{0}\t\t{1}", chunkType[i], chunkSize[i]);
+                Console.WriteLine("{0}\t\t{1}", chunkType[i], chunkSize[i] - 12);
             }
         }
         public static int ReturnChunkSize(byte[] lengthChunkField)
