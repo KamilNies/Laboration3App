@@ -72,7 +72,7 @@ namespace Laboration3
         }
         public static void SequenceJumper(byte[] array, int nextChunkIndex)
         {
-            /* The chunk signature for IHDR is found at index 1 of the chunkSignatures list. 
+            /* The chunk signature for IHDR is found at index 0 of the chunkSignatures list. 
             IHDR only appears once in our array, which is why we don't bother starting
             at index 0 when we do our new search. */
             for (int i = 1; i < chunkSignatures.Count; i++)
